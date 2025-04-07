@@ -7,6 +7,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import JsonLd from "@/components/json-ld"
 import FixedActionButtons from "@/components/fixed-action-buttons"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -71,7 +72,7 @@ export const metadata: Metadata = {
     canonical: 'https://decidedigital.com.br',
   },
   verification: {
-    google: 'google-site-verification-code', // Substitua pelo seu código real quando tiver
+    google: '5fgTEgcRSVcWOBoyahqovbp1VkI59fCrXf5Kdhn_mHA', // Substitua pelo seu código de verificação do Google Search Console
   }
 }
 
@@ -156,6 +157,20 @@ export default function RootLayout({
             <Footer />
             <FixedActionButtons />
           </div>
+          
+          {/* Google Analytics */}
+          <Script
+            strategy="afterInteractive"
+            src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" // Substitua G-XXXXXXXXXX pelo seu ID do GA4
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX'); // Substitua G-XXXXXXXXXX pelo seu ID do GA4
+            `}
+          </Script>
         </ThemeProvider>
       </body>
     </html>

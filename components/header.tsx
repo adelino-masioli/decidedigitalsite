@@ -37,9 +37,9 @@ const Header = () => {
           <Image 
             src="/logo-dark.png" 
             alt="Decide Digital" 
-            width={199} 
-            height={35} 
-            style={{ width: '199px', height: '35px', maxWidth: '199px' }}
+            width={150} 
+            height={27} 
+            style={{ width: '150px', height: '27px', maxWidth: '150px' }}
             priority 
           />
           </Link>
@@ -69,7 +69,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pt-5 pb-6 animate-fade-in">
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-2">
               <Link
                 href="/"
                 className="text-neutral-800 hover:text-[#23CB98] transition-colors py-2"

@@ -1,9 +1,10 @@
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone  } from "lucide-react"
+import TikTokIcon from "./tiktok"
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 text-neutral-200 pt-16 pb-8">
+    <footer className="bg-neutral-900 text-neutral-200 pt-8 md:pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
@@ -11,7 +12,7 @@ const Footer = () => {
             <p className="text-neutral-400 mb-6">Soluções digitais inteligentes para sua empresa crescer.</p>
             <div className="flex space-x-4">
               <Link
-                href="https://facebook.com"
+                href="https://www.facebook.com/decidedigitaloficial"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-[#23CB98] transition-colors"
@@ -20,7 +21,7 @@ const Footer = () => {
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/decidedigitaloficial"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-[#23CB98] transition-colors"
@@ -29,7 +30,16 @@ const Footer = () => {
                 <span className="sr-only">Instagram</span>
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://www.tiktok.com/@decidedigitaloficial"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-[#23CB98] transition-colors"
+              >
+                <TikTokIcon size={32} strokeWidth={2} />
+                <span className="sr-only">Tiktok</span>
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/96410978/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-400 hover:text-[#23CB98] transition-colors"

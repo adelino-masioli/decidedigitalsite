@@ -34,9 +34,9 @@ export default function Home() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-neutral-50 to-neutral-100 pt-24 pb-0 md:pt-32 md:pb-28">
+      <section className="relative bg-gradient-to-b from-neutral-50 to-neutral-100 pt-12 pb-0 md:pt-32 md:pb-28">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <AnimatedSection animation="slide-in-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
                 Soluções Digitais <span className="text-[#23CB98]">Inteligentes</span> para sua Empresa Crescer
@@ -55,14 +55,18 @@ export default function Home() {
             </AnimatedSection>
 
             <AnimatedSection animation="slide-in-right" className="block">
-              <div className="relative h-[400px] w-full">
-                <AnimatedImage
-                  src="/man-using-tablet-work-connect-with-others.webp"
-                  alt="Soluções Digitais"
-                  fill
-                  priority
-                  animationDuration={8}
-                />
+              {/* Reduz a altura no mobile (default) e mantém 400px em md+ */}
+              <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-xl">
+                <video 
+                  className="w-full h-full object-cover" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                >
+                  <source src="/videos/2.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos HTML5.
+                </video>
               </div>
             </AnimatedSection>
           </div>
@@ -74,7 +78,7 @@ export default function Home() {
       {/* Services Section */}
       <section className="py-10  md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="text-center mb-16">
+          <AnimatedSection className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">O que fazemos</h2>
             <p className="text-neutral-600 max-w-2xl mx-auto">
               Oferecemos soluções completas em tecnologia para impulsionar o crescimento do seu negócio.
@@ -134,9 +138,9 @@ export default function Home() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-8 md:py-20 bg-neutral-50">
         <div className="container mx-auto px-4 md:px-6">
-          <AnimatedSection className="text-center mb-16">
+          <AnimatedSection className="text-center mb-8 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Tecnologias Utilizadas</h2>
             <p className="text-neutral-600 max-w-2xl mx-auto">
               Trabalhamos com as tecnologias mais modernas e eficientes do mercado.
@@ -167,17 +171,21 @@ export default function Home() {
       </section>
 
       {/* Differentials Section */}
-      <section className="py-20 bg-white">
+      <section className="py-5 md:py-20 bg-white pb-12 md:pb-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <AnimatedSection animation="slide-in-left">
-              <div className="relative h-[400px] w-full">
-                <AnimatedImage
-                  src="/diverse-people-using-their-phones.webp"
-                  alt="Nossos Diferenciais"
-                  fill
-                  animationDuration={10}
-                />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <AnimatedSection animation="slide-in-left" className="block">
+              <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-xl">
+                <video 
+                  className="w-full h-full object-cover" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                >
+                  <source src="/videos/3.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos HTML5.
+                </video>
               </div>
             </AnimatedSection>
 
@@ -227,7 +235,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-neutral-900 text-white">
+      <section className="py-8 md:py-20 bg-neutral-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar seu negócio?</h2>
@@ -244,4 +252,3 @@ export default function Home() {
     </div>
   )
 }
-

@@ -62,7 +62,7 @@ export default function ContatoPage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-neutral-50 to-neutral-100 pt-24 pb-20 md:pt-32 md:pb-28">
+      <section className="bg-gradient-to-b from-neutral-50 to-neutral-100 pt-12 pb-12 md:pt-32 md:pb-28">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Fale com a Decide Digital</h1>
@@ -75,7 +75,7 @@ export default function ContatoPage() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-white">
+      <section className="py-8 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <AnimatedSection animation="slide-in-left">

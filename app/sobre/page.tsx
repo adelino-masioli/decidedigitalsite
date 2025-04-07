@@ -32,7 +32,7 @@ export default function SobrePage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-neutral-50 to-neutral-100 pt-24 pb-20 md:pt-32 md:pb-28">
+      <section className="bg-gradient-to-b from-neutral-50 to-neutral-100 pt-12 pb-12 md:pt-32 md:pb-28">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre a Decide Digital</h1>
@@ -45,7 +45,7 @@ export default function SobrePage() {
       </section>
 
       {/* History Section */}
-      <section className="py-20 bg-white">
+      <section className="py-8 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection animation="slide-in-left">
@@ -65,14 +65,18 @@ export default function SobrePage() {
               </p>
             </AnimatedSection>
 
-            <AnimatedSection animation="slide-in-right">
-              <div className="relative h-[400px] w-full">
-                <AnimatedImage
-                  src="/graph-data-show-summary-analysis-icon-graphic.webp"
-                  alt="História da Decide Digital"
-                  fill
-                  animationDuration={9}
-                />
+            <AnimatedSection animation="slide-in-right" className="block">
+              <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-xl">
+                <video 
+                  className="w-full h-full object-cover" 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                >
+                  <source src="/videos/1.mp4" type="video/mp4" />
+                  Seu navegador não suporta vídeos HTML5.
+                </video>
               </div>
             </AnimatedSection>
           </div>
@@ -80,7 +84,7 @@ export default function SobrePage() {
       </section>
 
       {/* Timeline Section */}
-      <section className="py-20 bg-neutral-50">
+      <section className="py-8 md:py-20 bg-neutral-50">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossa Trajetória</h2>
@@ -163,14 +167,14 @@ export default function SobrePage() {
       </section>
 
       {/* Mission, Vision, Values Section */}
-      <section className="py-20 bg-white">
+      <section className="py-8 md:py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Missão, Visão e Valores</h2>
             <p className="text-neutral-600 max-w-2xl mx-auto">Conheça os princípios que norteiam nosso trabalho.</p>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8">
             <AnimatedSection animation="slide-up" delay={0.1}>
               <div className="bg-neutral-50 p-8 rounded-xl h-full">
                 <h3 className="text-2xl font-bold mb-4 text-[#23CB98]">Missão</h3>
@@ -243,7 +247,7 @@ export default function SobrePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-neutral-900 text-white">
+      <section className="py-8 md:py-20 bg-neutral-900 text-white">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Vamos trabalhar juntos?</h2>

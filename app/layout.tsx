@@ -158,17 +158,26 @@ export default function RootLayout({
             <FixedActionButtons />
           </div>
           
-          {/* Google Analytics */}
+          {/* Google Analytics - Otimizado para desempenho */}
           <Script
-            strategy="afterInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-YXFZQQZTPY" // Substitua G-XXXXXXXXXX pelo seu ID do GA4
+            strategy="lazyOnload"
+            src="https://www.googletagmanager.com/gtag/js?id=G-YXFZQQZTPY"
+            async
+            defer
           />
-          <Script id="google-analytics" strategy="afterInteractive">
+          <Script id="google-analytics" strategy="lazyOnload">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-YXFZQQZTPY'); // Substitua G-XXXXXXXXXX pelo seu ID do GA4
+              gtag('config', 'G-YXFZQQZTPY', {
+                'send_page_view': false,  // Controle manual de page views para otimização
+                'transport_type': 'beacon' // Usa o Beacon API para envio mais eficiente
+              });
+              // Envia pageview apenas quando a página estiver totalmente carregada
+              window.addEventListener('load', function() {
+                gtag('event', 'page_view');
+              });
             `}
           </Script>
         </ThemeProvider>

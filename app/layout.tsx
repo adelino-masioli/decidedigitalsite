@@ -161,14 +161,14 @@ export default function RootLayout({
           {/* Google Analytics */}
           <Script
             strategy="afterInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" // Substitua G-XXXXXXXXXX pelo seu ID do GA4
+            src="https://www.googletagmanager.com/gtag/js?id=G-339805960" // Substitua G-XXXXXXXXXX pelo seu ID do GA4
           />
           <Script id="google-analytics" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX'); // Substitua G-XXXXXXXXXX pelo seu ID do GA4
+              gtag('config', 'G-339805960'); // Substitua G-XXXXXXXXXX pelo seu ID do GA4
             `}
           </Script>
         </ThemeProvider>
